@@ -1,0 +1,235 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --primary: #1e3a8a; /* Professional College Navy Blue */
+    --accent: #b91c1c;  /* Maroon Highlight Color */
+    --text: #334155;
+    --light: #f8fafc;
+}
+
+body { color: var(--text); background-color: #fff; }
+
+/* Navbar styling with Logo integration */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 8%;
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%; top: 0; z-index: 1000;
+}
+
+.logo-container { display: flex; align-items: center; gap: 10px; }
+.college-logo { width: 40px; height: 40px; background: #e2e8f0; border-radius: 50%; }
+.logo-text { font-size: 22px; font-weight: 700; color: var(--primary); }
+.logo-text span { color: var(--accent); }
+
+.nav-links { display: flex; list-style: none; }
+.nav-links li { margin-left: 20px; }
+.nav-links a { text-decoration: none; color: var(--text); font-weight: 500; transition: 0.3s; }
+.nav-links a:hover, .nav-links a.active { color: var(--primary); font-weight: 600; }
+
+.hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+.hamburger span { width: 25px; height: 3px; background: var(--primary); }
+
+/* Slider Section */
+.slider-container { position: relative; height: 70vh; margin-top: 70px; overflow: hidden; }
+.slider { width: 100%; height: 100%; }
+.slide { position: absolute; width: 100%; height: 100%; background-size: cover; background-position: center; opacity: 0; transition: opacity 0.8s ease; display: flex; align-items: center; justify-content: center; color: #fff; text-align: center; }
+.slide.active { opacity: 1; }
+.slide-content h1 { font-size: 46px; margin-bottom: 10px; text-transform: uppercase; }
+
+.arrow { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.4); color: #fff; border: none; padding: 12px 16px; cursor: pointer; font-size: 20px; z-index: 10; border-radius: 4px; }
+.prev { left: 15px; } .next { right: 15px; }
+
+/* Global Sections setup */
+section { padding: 80px 8%; }
+.section-title { text-align: center; font-size: 32px; color: var(--primary); margin-bottom: 40px; position: relative; }
+.section-title::after { content: ''; display: block; width: 60px; height: 3px; background: var(--accent); margin: 10px auto 0 auto; }
+
+/* About */
+.about-container { display: flex; gap: 40px; align-items: center; }
+.about-text { flex: 1; }
+.about-text h3 { color: var(--primary); margin-bottom: 15px; font-size: 24px; }
+.about-text p { margin-bottom: 15px; line-height: 1.7; }
+.about-img { flex: 1; }
+.about-img img { width: 100%; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+
+/* Courses */
+/* --- Courses Horizontal Slider Styling --- */
+.courses-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.courses-section .course-grid {
+    display: flex !important; /* Grid chya jagi flex kela mhanje eka line madhye yetil */
+    gap: 25px;
+    overflow-x: auto !important; /* Horizontal scroll chalu kela */
+    scroll-behavior: smooth;
+    padding: 20px 10px;
+    width: 100%;
+}
+
+/* Scrollbar hide karnyasaathi */
+.courses-section .course-grid::-webkit-scrollbar {
+    display: none;
+}
+
+.courses-section .course-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    border-top: 5px solid var(--primary);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    
+    /* Laptop var 3 cards dakhavnyasathi */
+    flex: 0 0 calc(33.333% - 17px) !important; 
+    min-width: 280px; 
+    transition: transform 0.3s;
+}
+
+/* Slider Buttons (Left/Right Arrows) */
+.scroll-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--primary);
+    color: #fff;
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.prev-btn { left: -10px; }
+.next-btn { right: -10px; }
+
+/* Responsive */
+@media (max-width: 900px) {
+    .courses-section .course-card { flex: 0 0 calc(50% - 13px) !important; }
+}
+@media (max-width: 600px) {
+    .courses-section .course-card { flex: 0 0 85% !important; }
+}
+
+
+/* Placements Section - Poora Updated Code */
+.placement-stats { 
+    display: flex; 
+    justify-content: space-around; 
+    text-align: center; 
+    margin-bottom: 40px; 
+    gap: 20px; 
+}
+
+.stat-box { 
+    background: var(--light); 
+    padding: 25px; 
+    border-radius: 8px; 
+    flex: 1; 
+    box-shadow: inset 0 -4px 0 var(--accent); 
+}
+
+.stat-box h3 { 
+    font-size: 36px; 
+    color: var(--primary); 
+}
+
+.sub-title { 
+    text-align: center; 
+    margin-bottom: 20px; 
+    color: var(--text); 
+}
+
+/* --- Hya khali badal kele ahet --- */
+
+.recruiter-logos {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.company {
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    padding: 15px 25px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column; /* Logo var ani naav khali disel */
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-width: 140px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+    transition: transform 0.3s ease;
+}
+
+.company:hover {
+    transform: translateY(-5px); /* Hover kelya var box thoda var yeil */
+    border-color: var(--accent);
+}
+
+.comp-logo {
+    width: 50px;       /* Logo chi size */
+    height: 50px;
+    object-fit: contain; /* Image cha shep barobar rahil */
+}
+
+.company span {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text);
+}
+
+/* Admission Form */
+.admission-section { background: var(--light); }
+.form-container { max-width: 550px; margin: 0 auto; background: #fff; padding: 40px; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+.form-group { margin-bottom: 20px; }
+.form-group label { display: block; margin-bottom: 6px; font-weight: 500; }
+.form-group input, .form-group select { width: 100%; padding: 12px; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 15px; }
+.btn-submit { width: 100%; padding: 14px; background: var(--primary); color: #fff; border: none; border-radius: 6px; font-weight: 600; font-size: 16px; cursor: pointer; transition: 0.3s; }
+.btn-submit:hover { background: #172554; }
+
+/* Contact Section */
+.contact-grid { display: flex; gap: 40px; }
+.contact-info { flex: 1; }
+.contact-info h3 { margin-bottom: 15px; color: var(--primary); }
+.contact-info p { margin-bottom: 12px; font-size: 16px; }
+.contact-map { flex: 1; }
+.map-box { width: 100%; height: 250px; background: #e2e8f0; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 500; color: #64748b; border: 2px dashed #cbd5e1; }
+
+footer { background: #0f172a; color: #fff; text-align: center; padding: 25px; font-size: 14px; }
+
+/* Responsive Media Queries */
+@media (max-width: 900px) {
+    .about-container, .contact-grid { flex-direction: column; }
+    .placement-stats { flex-direction: column; }
+}
+
+@media (max-width: 768px) {
+    .hamburger { display: flex; }
+    .nav-links { position: absolute; top: 70px; right: -100%; width: 220px; height: calc(100vh - 70px); background: #fff; flex-direction: column; padding: 30px 0; gap: 20px; text-align: center; box-shadow: -4px 0 10px rgba(0,0,0,0.05); transition: 0.3s ease; }
+    .nav-links.active { right: 0; }
+    .nav-links li { margin: 0; }
+    .slide-content h1 { font-size: 28px; }
+}

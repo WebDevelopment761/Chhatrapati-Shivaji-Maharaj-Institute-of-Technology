@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chhatrapati Shivaji Maharaj Institute of Technology</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://googleapis.com" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header & Navbar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo-container">
+                <!-- Real Web sarkha Dummy Logo Placeholder -->
+                <img src="Logo.jpg" alt="Logo" class="college-logo">
+                <div class="logo-text">CSMIT<span>Jalgaon</span></div>
+            </div>
+            
+            <div class="hamburger" id="hamburger">
+                <span></span><span></span><span></span>
+            </div>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#courses">Courses</a></li>
+                <li><a href="#placements">Placements</a></li>
+                <li><a href="#admission">Admission</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 1. Home Section (Image Slider) -->
+    <section id="home" class="slider-container">
+        <div class="slider">
+            <div class="slide active" style="background-image: linear-gradient(rgba(15,23,42,0.65), rgba(15,23,42,0.65)), url('pexels-davegarcia-31039053.jpg');">
+                <div class="slide-content">
+                    <h1>Welcome to CSMIT</h1>
+                    <p>An Autonomous Institute Affiliated with State University. NAAC A+ Accredited.</p>
+                </div>
+            </div>
+            <div class="slide" style="background-image: linear-gradient(rgba(15,23,42,0.65), rgba(15,23,42,0.65)), url('pexels-davegarcia-31039053.jpg');">
+                <div class="slide-content">
+                    <h1>Empowering Education & Innovation</h1>
+                    <p>Providing world-class technical skills and engineering excellence.</p>
+                </div>
+            </div>
+        </div>
+        <button class="arrow prev" id="prevSlide">&#10094;</button>
+        <button class="arrow next" id="nextSlide">&#10095;</button>
+    </section>
+
+    <!-- 2. About Section -->
+    <section id="about" class="about-section">
+        <h2 class="section-title">About Our Institute</h2>
+        <div class="about-container">
+            <div class="about-text">
+                <h3>Building Bright Futures Since 2005</h3>
+                <p>Our institute is dedicated to providing quality education in engineering and management. With highly qualified faculty members and global industrial tie-ups, we prepare our students to face corporate challenges.</p>
+                <p>We focus on regular practical training, research projects, and extracurricular activities for holistic development.</p>
+            </div>
+            <div class="about-img">
+                <img src="pexels-davegarcia-31039053.jpg" alt="Campus">
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Courses Section -->
+   <section id="courses" class="courses-section">
+    <h2 class="section-title">Academic Programs</h2>
+    
+    <!-- Navya wrapper wrapper mule cards ekya line madhye scroll hotil -->
+    <div class="courses-wrapper">
+        
+        <!-- Left Slider Button -->
+        <button class="scroll-btn prev-btn" id="coursePrev" type="button">&#10094;</button>
+        
+        <!-- Id 'courseGrid' jodhla ahe jyamule JavaScript la control karta yeil -->
+        <div class="course-grid" id="courseGrid">
+            
+            <!-- 1. B.Tech CSE -->
+            <div class="course-card">
+                <h3>B.Tech - Computer Science & Engineering</h3>
+                <p class="duration">Duration: 4 Years</p>
+                <p>Focus on Artificial Intelligence, Machine Learning, Cloud Computing, and Software Engineering.</p>
+            </div>
+
+            <!-- 2. B.Tech IT -->
+            <div class="course-card">
+                <h3>B.Tech - Information Technology</h3>
+                <p class="duration">Duration: 4 Years</p>
+                <p>Focus on Cyber Security, Database Management Systems, and Web Application Development.</p>
+            </div>
+
+            <!-- 3. BBA -->
+            <div class="course-card">
+                <h3>BBA - Bachelor of Business Administration</h3>
+                <p class="duration">Duration: 3 Years</p>
+                <p>Focus on Core Management Concepts, Human Resource Principles, and Marketing Strategies.</p>
+            </div>
+
+            <!-- 4. BCA -->
+            <div class="course-card">
+                <h3>BCA - Bachelor of Computer Applications</h3>
+                <p class="duration">Duration: 3 Years</p>
+                <p>Focus on Computer Applications, Programming Languages like Java/Python, and Software Design.</p>
+            </div>
+
+            <!-- 5. B.Sc IT -->
+            <div class="course-card">
+                <h3>B.Sc - Information Technology</h3>
+                <p class="duration">Duration: 3 Years</p>
+                <p>Focus on Networking Fundamentals, System Analysis, Data Science, and Information Security.</p>
+            </div>
+
+            <!-- 6. MBA -->
+            <div class="course-card">
+                <h3>MBA - Business Analytics</h3>
+                <p class="duration">Duration: 2 Years</p>
+                <p>Focus on Data-driven management strategies, Business Intelligence, and financial analysis tools.</p>
+            </div>
+
+            <!-- 7. MCA -->
+            <div class="course-card">
+                <h3>MCA - Master of Computer Applications</h3>
+                <p class="duration">Duration: 2 Years</p>
+                <p>Focus on Advanced Software Development, Mobile App Engineering, and Enterprise Computing.</p>
+            </div>
+
+            <!-- 8. M.Tech IT -->
+            <div class="course-card">
+                <h3>M.Tech - Information Technology</h3>
+                <p class="duration">Duration: 2 Years</p>
+                <p>Focus on High-Performance Networks, Advanced Research Projects, and Data Mining Technologies.</p>
+            </div>
+
+            <!-- 9. Ph.D -->
+            <div class="course-card">
+                <h3>Ph.D - Doctor of Philosophy</h3>
+                <p class="duration">Duration: 3-5 Years</p>
+                <p>Focus on Advanced Academic Research, Innovations, Thesis Submission, and Technology Publications.</p>
+            </div>
+            
+        </div> <!-- /course-grid -->
+
+        <!-- Right Slider Button -->
+        <button class="scroll-btn next-btn" id="courseNext" type="button">&#10095;</button>
+        
+    </div> <!-- /courses-wrapper -->
+</section>
+
+
+
+    <!-- 4. Placements Section -->
+    <section id="placements" class="placement-section">
+        <h2 class="section-title">Our Placement Highlights</h2>
+        <div class="placement-stats">
+            <div class="stat-box"><h3>94%</h3><p>Placement Rate</p></div>
+            <div class="stat-box"><h3>45 LPA</h3><p>Highest Package</p></div>
+            <div class="stat-box"><h3>6.5 LPA</h3><p>Average Package</p></div>
+        </div>
+        <h3 class="sub-title">Top Recruiters</h3>
+<div class="recruiter-logos">
+    <!-- TCS -->
+    <div class="company">
+        <img src="tcs.png" alt="TCS Logo" class="comp-logo">
+        <span>TCS</span>
+    </div>
+    <!-- Infosys -->
+    <div class="company">
+        <img src="infosys.png" alt="Infosys Logo" class="comp-logo">
+        <span>Infosys</span>
+    </div>
+    <!-- Wipro -->
+    <div class="company">
+        <img src="wipro.webp" alt="Wipro Logo" class="comp-logo">
+        <span>Wipro</span>
+    </div>
+    <!-- Cognizant -->
+    <div class="company">
+        <img src="congnizant.png" alt="Cognizant Logo" class="comp-logo">
+        <span>Cognizant</span>
+    </div>
+    <!-- Amazon -->
+    <div class="company">
+        <img src="amazon.png" alt="Amazon Logo" class="comp-logo">
+        <span>Amazon</span>
+    </div>
+    <!-- Flipkart -->
+    <div class="company">
+        <img src="flipkart.jpg" alt="Flipkart Logo" class="comp-logo">
+        <span>Flipkart</span>
+    </div>
+</div>
+
+    </section>
+
+    <!-- 5. Admission Form Section -->
+    <section id="admission" class="admission-section">
+        <h2 class="section-title">Admission Registration 2026</h2>
+        <div class="form-container">
+            <form id="admissionForm">
+                <div class="form-group">
+                    <label>Student Full Name</label>
+                    <input type="text" id="studentName" required placeholder="Enter full name">
+                </div>
+                <div class="form-group">
+                    <label>Mobile Number</label>
+                    <input type="tel" id="studentPhone" required placeholder="Enter mobile number">
+                </div>
+                <div class="form-group">
+                    <label>Select Course</label>
+                    <select id="selectedCourse" required>
+                        <option value="">-- Choose Course --</option>
+                        <option value="btech-cse">B.Tech CSE</option>
+                        <option value="btech-it">B.Tech IT</option>
+                        <option value="bba">BBA</option>
+                        <option value="bca">BCA</option>
+                        <option value="bsc-it">B.Sc IT</option>
+                        <option value="mba">MBA</option>
+                        <option value="mca">MCA</option>
+                        <option value="mtech-it">M.Tech IT</option>
+                        <option value="phd-it">Ph.D</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn-submit">Apply Now</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- 6. Contact Section -->
+    <section id="contact" class="contact-section">
+        <h2 class="section-title">Contact Us</h2>
+        <div class="contact-grid">
+            <div class="contact-info">
+                <h3>Campus Address</h3>
+                <p>📍 Mohadi, Jalgaon, Maharashtra, 425001</p>
+                <p>📞 Phone: <a href="tel:+917972742387" class="clickable-link">+91-7972742387</a></p>
+                <p>✉️ Email: <a href="mailto:founder.smartwebsolution@gmail.com" class="clickable-link">founder.smartwebsolution@gmail.com</a></p>
+            </div>
+
+            <div class="contact-map">
+    <!-- Real Interactive Google Map - Hya khali link add kely ahe -->
+    <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1249.4013691441758!2d75.55530257288075!3d20.96601281180386!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd90fa4a1eab90f%3A0x37f67bd21bff0a3c!2sJalgaon%2C%20Maharashtra!5e1!3m2!1sen!2sin!4v1781542870912!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        width="100%" 
+        height="300" 
+        style="border:0; border-radius: 8px;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+</div>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Chhatrapati Shivaji Maharaj Institute of Technology. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
